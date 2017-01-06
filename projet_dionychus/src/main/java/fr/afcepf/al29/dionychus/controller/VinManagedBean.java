@@ -58,7 +58,7 @@ public class VinManagedBean implements Serializable {
 		vinsRecherche = proxyInventaire.getAllVinAromeCepage();
 		List<Vin> selectVin = new ArrayList<>();
 
-		if(typeVin != 0) {
+		if ((typeVin != null) && (typeVin != 0)) {
 			for (Vin vin : vinsRecherche) {
 				if(vin.getTypeVin().getIdTypeVin() != typeVin) {
 					selectVin.add(vin);
